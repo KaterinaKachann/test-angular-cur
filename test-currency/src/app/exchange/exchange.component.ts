@@ -40,11 +40,11 @@ export class ExchangeComponent implements OnInit {
   constructor(private api: CurrencyapidateService) {}
 
   calculateA() {
-    this.inputA = this.inputB * (this.currancy as any)[this.selectB][this.selectA]
+    this.inputA = Number((this.inputB * (this.currancy as any)[this.selectB][this.selectA]).toFixed(2))
   }
 
   calculateB() {
-    this.inputB = this.inputA * (this.currancy as any)[this.selectA][this.selectB]
+    this.inputB = Number((this.inputA * (this.currancy as any)[this.selectA][this.selectB]).toFixed(2))
   }
 
   ngOnInit(): void {
