@@ -1,0 +1,37 @@
+<div class="wrapper">
+    <div class="main-container">
+      <div class="select-container">
+        <div class="select-item">
+          <input [(ngModel)]="inputA" 
+            (ngModelChange)="calculateB()"
+            #inputFrom
+            type="number"
+            aria-label="Поле для ввода суммы в валюте"
+          />
+          <div class="select-menu">
+            <div class="select-block"></div>
+            <select aria-label="тип валюты" [(ngModel)]="selectA" (ngModelChange)="calculateB()">
+              <option value="USD">USD - US Dollar</option>
+              <option value="EUR">EUR - EURO</option>
+              <option value="UAH">UAH - Ukrainian Hryvnia</option>
+            </select>
+          </div>
+        </div>
+        <div class="select-item">
+          <input [(ngModel)]="inputB" (ngModelChange)="calculateA()"
+            type="number"
+            aria-label="Поле для ввода суммы в валюте"
+          />
+          <div class="select-menu">
+            <div class="select-block"></div>
+            <select name="" aria-label="тип валюты" [(ngModel)]="selectB" (ngModelChange)="calculateA()">
+              <option value="USD">USD - US Dollar</option>
+              <option value="EUR">EUR - EURO</option>
+              <option value="UAH">UAH - Ukrainian Hryvnia</option>
+            </select>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    </div>
